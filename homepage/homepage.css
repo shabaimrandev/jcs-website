@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #1e4da1;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.social-media-icons i {
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+    cursor: pointer;
+}
+
+.sis-pms-contact strong {
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+}
+
+img {
+    max-width: 50%; /* Ensures image doesn't overflow its container */
+    height: auto;
+}
