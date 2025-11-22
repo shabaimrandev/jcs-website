@@ -51,9 +51,9 @@ body {
     display: block;
     color: #1e4da1;
     text-align: center;
-    padding: 14px 16px; /* divide by 16 to get rem value */
+    padding: 0.875rem 1rem; /* divide by 16 to get rem value */
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 
 /* Hide the link that should open and close the navbar on small screens */
@@ -106,12 +106,10 @@ body {
 .numbertext {
     color: #f2f2f2;
     font-size: 12px;
-    padding: 8px 12px;
+    padding: 0.5rem 0.75rem;
     position: absolute;
     top: 0;
 }
-
-/* .active { background-color: #717171; } */
 
 /* Fading animation */
 .fade {
@@ -124,17 +122,72 @@ body {
     to { opacity: 1 }
 }
 
+/* APPLY & REGISTER SECTION */
 .apply-and-register {
     color: white;
     background-color: #1e4da1;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
 }
 
 .apply {
     border: 2px solid #fff;
     width: 200px;
-    padding: 10px;
+    padding: 0.625rem;
     margin: auto;
+}
+
+/* ARTICLES SECTION */
+.articles { text-align: center; }
+
+.item1, .item2, .item3 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.border-bottom { border-bottom: 1px solid grey; }
+
+/* Tablet mode */
+@media screen and (min-width: 768px) {
+    .articles {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .item3 {
+        grid-column-start: 1;
+        grid-column-end: 3; /* span both columns */
+    }
+}
+
+/* Latop mode */
+@media screen and (min-width: 1024px) {
+    /* Reset the spanning of item 3 */
+    .item3 {
+        grid-column: auto;
+    }
+
+    .articles {
+        grid-template-columns: auto auto auto; /* Change fro 2 to 3 columns */
+    }
+}
+
+.footer {
+    color: white;
+    background-color: #1e4da1;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
 }
