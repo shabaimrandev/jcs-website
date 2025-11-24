@@ -1,3 +1,19 @@
+/* LOADING PAGE */
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("content");
+
+    // Fade out effect
+    preloader.classList.add("fade-out");
+
+    // Remove after fading
+    setTimeout(() => {
+        preloader.style.display = "none";
+        content.style.display = "block";
+    }, 700);
+});
+
+/* NAVBAR */
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function toggleNavBar() {
     let navLinks = document.getElementById("myNav");
@@ -8,7 +24,7 @@ function toggleNavBar() {
     }
 }
 
-
+/* SLIDESHOW */
 let slideIndex = 0;
 showSlides();
 
@@ -25,5 +41,5 @@ function showSlides() {
     }
 
     slides[slideIndex-1].style.display = "block";
-    // setTimeout(showSlides, 5000); // Change image every 5 seconds
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
